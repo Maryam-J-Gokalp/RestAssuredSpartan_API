@@ -8,6 +8,9 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import static io.restassured.RestAssured.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -66,4 +69,60 @@ public class SpartanTestWithParameters {
         assertTrue(response.body().asString().contains("Not Found"));
 
     }
+
+
+    @DisplayName("Spartan query test")
+    @Test
+    public void test3(){
+
+        //given accept type json
+        //and query parameter values are:
+        //gender:Female nameContains=e
+        //When user send get request to /api/spartans/search
+        //then response status code should be 200
+        //and response content type = "application/json"
+        //and "Female" should be in response payload
+        //and "Janette" should be in response payload
+
+
+
+        Response response = given().accept(ContentType.JSON).and()
+                .queryParams("gender", "Female")
+                .and().queryParams("nameContains", "e")
+                .get(baseURI + "/api/spartans/search");
+
+        assertEquals(200,response.statusCode());
+        assertEquals("application/json",response.contentType());
+        assertTrue(response.body().asString().contains("Female") && response.body().asString().contains("Janette"));
+
+
+    }
+
+
+    @DisplayName("Spartan test 3 inspect with MAP -> get request to /api/spartans/seatch with query params (MAP)")
+    @Test
+    public void test4(){
+
+        Map<String,Object> queryParams = new HashMap<>();
+
+        queryParams.put("nameContains","e");
+        queryParams.put("gender","Female");
+
+        Response response = given()
+                .log().all()
+                .accept(ContentType.JSON)
+                .and()
+                .queryParams(queryParams)
+                .get(baseURI + "/api/spartans/search");
+
+        response.prettyPrint();
+
+        assertEquals(200,response.statusCode());
+        assertEquals("application/json",response.contentType());
+        assertTrue(response.body().asString().contains("Female") && response.body().asString().contains("Janette"));
+
+
+
+    }
+
 }
