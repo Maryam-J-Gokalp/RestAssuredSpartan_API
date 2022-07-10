@@ -91,6 +91,39 @@ public class SpartanGetRequests {
 
 
 
+    @DisplayName("Hello spartan test")
+    @Test
+    public void test3(){
+
+        //Given no headers provided
+        //When users sends GET request to /api/hello
+        //Then response status code should be 200
+        //And content type header should be "text/plain;charset=UTF-8"
+        //And header should contain Date
+        //And content-length should be 17
+        //And body should be "Hello from Sparta"
+
+
+        Response response = RestAssured
+                .given()
+                .accept(ContentType.ANY)
+                .get(url + "/api/hello");
+
+
+        Assertions.assertEquals(200,response.statusCode());
+        Assertions.assertEquals("text/plain;charset=UTF-8",response.contentType());
+        Assertions.assertTrue(response.headers().hasHeaderWithName("Date"));
+        Assertions.assertEquals(17,response.body().asString().length());
+        Assertions.assertTrue(response.header("Content-Length").equals("17"));
+        Assertions.assertEquals("Hello from Sparta",response.body().asString());
+
+        System.out.println(response.header("Connection"));
+
+
+    }
+
+
+
 
 
 }
