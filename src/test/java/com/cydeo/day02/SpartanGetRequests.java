@@ -1,5 +1,7 @@
 package com.cydeo.day02;
 
+import static io.restassured.RestAssured.*;
+
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
@@ -25,8 +27,7 @@ public class SpartanGetRequests {
 
 
 
-        Response response = RestAssured
-                .given()
+        Response response =  given()
                 .accept(ContentType.JSON)
                 .when()
                 .get(url + "/api/spartans");
@@ -66,7 +67,7 @@ public class SpartanGetRequests {
         //and json body should contain Fidole
 
 
-        Response response = RestAssured.given().accept(ContentType.JSON)
+        Response response = given().accept(ContentType.JSON)
                 .when()
                 .get(url + "/api/spartans/3");
 

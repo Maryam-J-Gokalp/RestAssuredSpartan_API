@@ -49,6 +49,5 @@ public class HRGetRequests {
         assertEquals("application/json",response.contentType());
         assertTrue(response.body().asString().contains("Americas"));
 
-
     }
 }
