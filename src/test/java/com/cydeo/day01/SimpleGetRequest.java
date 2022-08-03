@@ -4,11 +4,9 @@ import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import org.junit.jupiter.api.Test;
 
-import java.util.Arrays;
-
 public class SimpleGetRequest {
 
-    String url = "http://18.206.123.3:8000/api/spartans";
+    String url = "http://54.237.206.21:8000//api/spartans";
 
 
     @Test
