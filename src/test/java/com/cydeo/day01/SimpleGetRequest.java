@@ -9,6 +9,7 @@ public class SimpleGetRequest {
     String url = "http://54.237.206.21:8000//api/spartans";
 
 
+
     @Test
     public void test1(){
 
