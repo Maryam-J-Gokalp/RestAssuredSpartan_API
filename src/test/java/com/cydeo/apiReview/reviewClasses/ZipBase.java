@@ -10,7 +10,7 @@ public class ZipBase {
     @BeforeAll
     public static void init(){
 
-        baseURI = "http://api.zippopotam.us"; //http yi unutma yoksa çalışmaz
+        baseURI = "http://api.zippopotam.us"; //Don't forget http or it won't work
         basePath ="/us";
     }
 

@@ -69,9 +69,10 @@ public class HamcrestMatchersApiTest extends SpartanTestBase {
                 .and()
                 .header("Content-Length",is("275"))
                 .and()
-                .header("Date",notNullValue())
+                .header("Date",notNullValue())          //If u get some kind of nullValue won't complain
                 .and()
-                .assertThat().body("teachers[0].firstName",is("Leonel"),
+                .assertThat()
+                .body("teachers[0].firstName",is("Leonel"),
                         "teachers[0].lastName",is("Messi"),
                         "teachers[0].gender",is("Male"));
 

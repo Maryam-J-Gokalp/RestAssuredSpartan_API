@@ -12,7 +12,7 @@ public abstract class SpartanTestBase {
         baseURI = ConfigurationReader.getProperty("spartan");
 
 
-        String dbURL = "jdbc:oracle:thin:@18.206.123.3:1521:XE";
+        String dbURL = "jdbc:oracle:thin:@54.237.206.21:1521:XE";
         String dbUserName= "SP";
         String dbPassword= "SP";
        // DBUtils.createConnection(dbURL,dbUserName,dbPassword);

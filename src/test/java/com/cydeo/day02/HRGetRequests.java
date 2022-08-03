@@ -1,7 +1,4 @@
 package com.cydeo.day02;
-
-
-import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import org.junit.jupiter.api.BeforeAll;
@@ -20,7 +17,8 @@ public class HRGetRequests {
     //BeforeAll is a annotation equals to @BeforeClass in testNG, we use with static method name
     @BeforeAll
     public static void init() {
-        baseURI = "http://18.206.123.3:1000/ords/hr";
+        baseURI = "http://54.237.206.21:1000/ords/hr";
+        // MY IP http://54.237.206.21:8000/
 
     }
 

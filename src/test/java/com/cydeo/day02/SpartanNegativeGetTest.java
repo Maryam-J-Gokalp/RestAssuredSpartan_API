@@ -15,7 +15,7 @@ public class SpartanNegativeGetTest {
 
     @BeforeAll
     public static void init(){
-        baseURI="http://18.206.123.3:8000";
+        baseURI="http://54.237.206.21:8000";
     }
 
 
