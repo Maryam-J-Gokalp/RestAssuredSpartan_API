@@ -1,4 +1,4 @@
-package com.cybertek.day4;
+package com.cybertek.day04;
 
 import com.cybertek.utilities.HRTestBase;
 import io.restassured.http.ContentType;

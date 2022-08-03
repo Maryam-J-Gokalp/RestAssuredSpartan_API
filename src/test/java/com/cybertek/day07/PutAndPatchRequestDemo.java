@@ -1,4 +1,4 @@
-package com.cybertek.day7;
+package com.cybertek.day07;
 
 import com.cybertek.utilities.SpartanTestBase;
 import io.restassured.http.ContentType;
@@ -9,7 +9,7 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 import static io.restassured.RestAssured.*;
 import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.*;
+
 public class PutAndPatchRequestDemo extends SpartanTestBase {
 
 

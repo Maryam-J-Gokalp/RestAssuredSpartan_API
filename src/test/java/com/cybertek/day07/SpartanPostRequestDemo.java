@@ -1,8 +1,7 @@
-package com.cybertek.day7;
+package com.cybertek.day07;
 
 import com.cybertek.pojo.Spartan;
 import com.cybertek.utilities.SpartanTestBase;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import org.junit.jupiter.api.DisplayName;

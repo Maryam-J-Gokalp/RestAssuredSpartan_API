@@ -1,4 +1,4 @@
-package com.cybertek.day4;
+package com.cybertek.day04;
 
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
