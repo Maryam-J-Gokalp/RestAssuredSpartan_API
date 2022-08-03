@@ -13,6 +13,7 @@ public class SimpleClass {
      Response response = RestAssured.get(url);
 
      System.out.println(response.statusCode());
+
  }
 
 
