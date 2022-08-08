@@ -1,6 +1,8 @@
 package com.cybertek.day10;
 
 import static io.restassured.RestAssured.*;
+import static org.hamcrest.MatcherAssert.*;
+import static org.hamcrest.Matchers.*;
 
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
@@ -47,7 +49,6 @@ public class FormulaOneXMLTest {
     @DisplayName("Circuit information")
     @Test
     public void test2(){
-
 
 
 

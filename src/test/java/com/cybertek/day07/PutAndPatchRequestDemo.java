@@ -10,7 +10,8 @@ import java.util.Map;
 import static io.restassured.RestAssured.*;
 import static org.hamcrest.MatcherAssert.assertThat;
 
-public class PutAndPatchRequestDemo extends SpartanTestBase {
+public class
+PutAndPatchRequestDemo extends SpartanTestBase {
 
 
     @DisplayName("PUT request to one spartan for update with Map")
